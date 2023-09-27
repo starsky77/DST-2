@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Find Different image</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/Users/Jaymar/SMU_HW/week5/TriviaGame/assets/css/style.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Custom styles for this template -->
+<!--    <link href="jumbotron-narrow.css" rel="stylesheet">-->
+
+  </head>
+
+  <body>
+  
+  
+    <div class="container">
+      <div class="header text-center clearfix">
+        <h1 class="text-muted">Find the image that is different from the other two</h1>
+      </div>
+      <div class="text-center">
+        <button id="generate-report" class="btn btn-warning btn-lg">Generate Report</button>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <div id="game">
+          <h2>In this test, you will be shown a series of three images on the screen. One of these images will be distinctly different from the other two. </h2>
+          <h2>Use the keys '1', '2', or '3' on your keyboard to select the image you believe is different from the other two. </h2>
+          <h2>After making your selection, press the 'Spacebar' to proceed to the next question.</h2>
+          <h2>Each set of images will be displayed for 800 ms. After this period, the images will disappear from the screen.</h2>
+          <h2>You have a total of 2000 ms (2 seconds) to make your selection, including 800ms during which the image appears .</h2>
+          <h2>You can try a few warmup examples to be familiar with the process before starting the actual test. Those examples can be very different from the real examples. Click "start test" at the bottom to start</h2>
+          <h2>You can have a rest after you have finished 100 sets of images, there will be notification on the screen</h2>
+          <h2>After you finish the whole test, remember to press the generate report button to get the final report.</h2>
+          <h2>-------------------------------------------------------------------------------------------</h2>
+          <!-- <div id="range-selector" class="text-center">
+            <h2>When you start the real test, fill in the following infomation.</h2>
+            <h2>Select the testing images range in total(each test you should select less than 500 images in total), the number starts from 0, up to 2000.</h2>
+            <h2>For example: start image number:0; end image number: 500 </h2>
+            <input type="number" id="start-range" placeholder="Enter start image number">
+            <input type="number" id="end-range" placeholder="Enter end image number">
+            <button id="submit-range" class="btn btn-primary">Submit</button>
+          </div>   -->
+          <div id="user-info" class="text-center">
+            <input type="text" id="user-name" placeholder="Enter the subject name">
+            <!-- <input type="text" id="user-id" placeholder="How many times is your experiment"> -->
+            <button id="submit-user-info" class="btn btn-primary">Submit</button>
+          </div>                
+          <h2>-------------------------------------------------------------------------------------------</h2>
+          <p id="remaining-time" class="text-muted">Remaining Time: <span id="timer"></span></p>
+          <p id="question" class="lead"></p>
+          <div id="images"></div>
+        </div>
+        <div id="results">
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="choices" class="text-center">
+          <div id="initial-images" class="text-center">
+            <img src="./assets/images/example/original/1.jpg" alt="Image 1" class="initial-image">
+            <img src="./assets/images/example/set1/1.jpg" alt="Image 2" class="initial-image">
+            <img src="./assets/images/example/set2/1.jpg" alt="Image 3" class="initial-image">
+          </div>
+          <!-- <div id="pre-question-images" class="text-center">
+            <img src="./assets/images/pre/pre_image.jpg" alt="Pre Image 1" class="pre-question-image">
+            <img src="./assets/images/pre/pre_image.jpg" alt="Pre Image 2" class="pre-question-image">
+            <img src="./assets/images/pre/pre_image.jpg" alt="Pre Image 3" class="pre-question-image">
+          </div>           -->
+          <button id="start_test" class="btn btn-info btn-lg">Start Test</button>            
+          <button id="start" class="btn btn-info btn-lg">Start Game</button>
+          <div id="options">
+          <button id="next-question" class="btn btn-primary btn-lg" style="display:none;">Next Question</button>
+          </div>
+          <button id="next-hundred" class="btn btn-primary btn-lg" style="display: none;">Proceed to Next 100 Questions</button>
+          <div id="rest-message" style="display: none;">Take some rest before starting the next 100 images</div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- TRIVIA APP JS -->
+    <script src="./assets/js/app.js"></script>  
+
+
+  </body>
+</html>
