@@ -158,10 +158,10 @@ var DST = {
   options: new Array(500).fill(['1', '2', '3']),
   answers: new Array(500).fill(''), // This will be filled in later based on the images
   images: new Array(500).fill([]),
-  images_fake: new Array(250).fill([]),
-  questions_fake: new Array(250).fill('Which image is diffrernt from the other two?'),
-  options_fake: new Array(250).fill(['1', '2', '3']),
-  answers_fake: new Array(250).fill(''), 
+  images_fake: new Array(100).fill([]),
+  questions_fake: new Array(100).fill('Which image is diffrernt from the other two?'),
+  options_fake: new Array(100).fill(['1', '2', '3']),
+  answers_fake: new Array(100).fill(''), 
   pre_images: new Array(1),
   // DST methods
   // method to initialize game
@@ -230,7 +230,7 @@ var DST = {
         // // Determine the answer based on which image ends with ".JPEG"
         DST.answers[i] = String(images.findIndex(img => img.endsWith('.JPEG')) + 1); // 1-based index for answer
       }
-      for (let i = 0; i < 210; i++){
+      for (let i = 0; i < 100; i++){
         let images = [];
         images.push('./assets/images/catch_trial/original/' + (i+1) + '.JPEG');
         images.push('./assets/images/catch_trial/set1/' + (i+1) + '.jpg');
